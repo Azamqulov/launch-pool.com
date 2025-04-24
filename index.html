@@ -5281,7 +5281,43 @@
       transition-property: opacity;
       transition-timing-function: cubic-bezier(.4, 0, .2, 1)
     }
+/* Container styles */
+.video-container {
+  width: 800px;
+  margin: 0 auto;
+}
 
+/* Responsive video wrapper with aspect ratio */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+/* iframe styles */
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .video-container {
+    max-width: 650px;
+  }
+}
+
+/* Small mobile devices */
+@media(max-width: 480px) {
+  .video-container {
+    max-width: 320px;
+  }
+}
     .hover\:\[\&\>a\]\:opacity-70>a:hover {
       opacity: .7
     }
@@ -5526,12 +5562,10 @@
     }
 
     .images {
-      background: #0000007a
+      background: #0000005c
     }
 
-    .images img {
-      height: 50% !important
-    }
+   
   </style>
   <style>
     .dark {
@@ -6050,11 +6084,16 @@
                     class="font-semibold transition-opacity hover:opacity-70" href="https://youtu.be/ctnBB3BC43A"
                     target="_blank"> https://youtu.be/ctnBB3BC43A </a></p>
               </div>
-              <div class="flex flex-col gap-y-8 lg:[grid-area:1/6/2/13]">
-                <iframe width="680" height="476" src="https://www.youtube.com/embed/1LmmNL6xHZE"
-                  title="Как зарегистрироваться на Криптобирже? Пошаговое руководство | ByBit" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container">
+                  <div class="video-wrapper">
+                    <iframe 
+                      src="https://www.youtube.com/embed/1LmmNL6xHZE" 
+                      title="Как зарегистрироваться на Криптобирже? Пошаговое руководство | ByBit"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>
               </div>
             </div><!--]-->
           </div>
