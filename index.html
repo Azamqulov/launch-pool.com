@@ -5562,7 +5562,13 @@
     }
 
     .images {
+      position: relative;
       background: #0000005c
+    }
+    .images img {
+      position: absolute;
+      bottom: -70px;
+      transform: rotate(15deg) !important;
     }
 
    
@@ -6026,7 +6032,7 @@
               </div>
               <div class="grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
                 <div>
-                  <div class="h-0 w-full images overflow-hidden rounded-[30px] pb-[100%] lg:h-auto lg:w-auto lg:pb-0">
+                  <div class="h-0 w-full images overflow-hidden rounded-[50px] pb-[100%] lg:h-auto lg:w-auto lg:pb-0">
                     <img class="min-h-full w-full" src="static/images/landing/team/man.png" alt="Артём" width="380"
                       height="420" loading="lazy">
                   </div>
