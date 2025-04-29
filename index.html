@@ -4477,6 +4477,9 @@
     }
 
     @media (min-width:768px) {
+      .images{
+        height: 326px;
+      }
       .md\:col-span-5 {
         grid-column: span 5/span 5
       }
@@ -4513,6 +4516,10 @@
     @media (min-width:1024px) {
       .lg\:col-span-4 {
         grid-column: span 4/span 4
+      }
+
+      .images{
+        height: 336px ;
       }
 
       .lg\:col-span-8 {
@@ -4633,15 +4640,24 @@
       .lg\:\[grid-area\:1\/6\/2\/13\] {
         grid-area: 1/6/2/13
       }
+
+  
+
     }
 
     @media (min-width:1120px) {
+      .images{
+        height: 354px;
+      }
       .min-\[1120px\]\:flex {
         display: flex
       }
     }
 
     @media (min-width:1280px) {
+      .images{
+        height: 390px !important;
+      }
       .xl\:col-span-3 {
         grid-column: span 3/span 3
       }
@@ -5281,43 +5297,46 @@
       transition-property: opacity;
       transition-timing-function: cubic-bezier(.4, 0, .2, 1)
     }
-/* Container styles */
-.video-container {
-  width: 800px;
-  margin: 0 auto;
-}
 
-/* Responsive video wrapper with aspect ratio */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  overflow: hidden;
-}
+    /* Container styles */
+    .video-container {
+      width: 800px;
+      margin: 0 auto;
+    }
 
-/* iframe styles */
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+    /* Responsive video wrapper with aspect ratio */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio */
+      overflow: hidden;
+    }
 
-/* Media query for mobile devices */
-@media screen and (max-width: 768px) {
-  .video-container {
-    max-width: 650px;
-  }
-}
+    /* iframe styles */
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
-/* Small mobile devices */
-@media(max-width: 480px) {
-  .video-container {
-    max-width: 320px;
-  }
-}
+    /* Media query for mobile devices */
+    @media screen and (max-width: 768px) {
+      .video-container {
+        max-width: 650px;
+      }
+    }
+
+    /* Small mobile devices */
+    @media(max-width: 480px) {
+      .video-container {
+        max-width: 320px;
+      }
+    }
+
     .hover\:\[\&\>a\]\:opacity-70>a:hover {
       opacity: .7
     }
@@ -5561,17 +5580,27 @@
       --scrollbar-thumb: rgb(var(--color-primary-DEFAULT)/1)
     }
 
-    .images {
-      position: relative;
-      background: #0000005c
-    }
-    .images img {
-      position: absolute;
-      bottom: -70px;
-      transform: rotate(15deg) !important;
+    @media (max-width: 1540px) {}
+
+    body {
+      --scrollbar-track: rgb(var(--color-gray-200)/1)
     }
 
-   
+    @media (max-width: 768px) {
+      body {
+        --scrollbar-track: rgb(var(--color-gray-200)/.5)
+      }
+    }
+
+    body {
+      --scrollbar-corner: rgb(var(--color-gray-200)/1)
+    }
+
+    @media (max-width: 768px) {
+      body {
+        --scrollbar-corner: rgb(var(--color-gray-200)/.5)
+      }
+    }
   </style>
   <style>
     .dark {
@@ -5591,6 +5620,9 @@
     }
   </style>
   <style>
+    .images-roteyt {
+      transform: rotate(15deg) !important;
+    }
     .LandingButton.solid {
       --tw-bg-opacity: 1;
       background-color: rgb(var(--color-primary-DEFAULT)/var(--tw-bg-opacity, 1));
@@ -5618,6 +5650,7 @@
       mask-size: 100% 100%;
       --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'/%3E%3C/svg%3E")
     }
+
   </style>
   <link rel="preload" as="fetch" crossorigin="anonymous" href="/_payload.json?304903cf-56e0-4aad-880b-b23718c2d2b2">
   <link rel="modulepreload" as="script" crossorigin href="/_nuxt/DUWYBje6.js">
@@ -5627,6 +5660,20 @@
   <link rel="prefetch" as="script" crossorigin href="/_nuxt/BK7EFNCK.js">
   <link rel="prefetch" as="script" crossorigin href="/_nuxt/CkCbrjOX.js">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    .images {
+      position: relative !important;
+      overflow: hidden;
+      background: #0000001a;
+      height: 420px !important;
+    }
+
+    .images img {
+      position: absolute !important;
+      bottom: -90px !important;
+      transform: rotate(15deg) !important;
+    }
+  </style>
   <meta name="description"
     content=" Launch Pool - это современные пулы для приобретения токенов на децентрализованных биржах (DEX)">
   <script type="module" src="/_nuxt/DUWYBje6.js" crossorigin></script>
@@ -6032,10 +6079,9 @@
               </div>
               <div class="grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
                 <div>
-                  <div class="h-0 w-full images overflow-hidden rounded-[50px] pb-[100%] lg:h-auto lg:w-auto lg:pb-0">
-                    <img class="min-h-full w-full" src="static/images/landing/team/man.png" alt="Артём" width="380"
-                      height="420" loading="lazy">
-                  </div>
+                  <div class="h-0  w-full overflow-hidden rounded-[30px] pb-[100%] images"><img
+                      class="min-h-full w-full images-roteyt" src="static/images/landing/team/man.png" alt="Денис" width="380"
+                      height="450" loading="lazy"></div>
                   <div class="mt-6 leading-tight lg:mt-8">
                     <div class="text-lg font-semibold sm:text-2xl lg:text-3xl"> Артём Тудоров </div>
                     <div class="text-primary font-semibold sm:text-xl lg:text-2xl"> Founder </div>
@@ -6046,7 +6092,7 @@
                 <div>
                   <div class="h-0 w-full overflow-hidden rounded-[30px] pb-[100%] lg:h-auto lg:w-auto lg:pb-0"><img
                       class="min-h-full w-full" src="static/images/landing/team/2.png" alt="Денис" width="380"
-                      height="420" loading="lazy"></div>
+                      height="400" loading="lazy"></div>
                   <div class="mt-6 leading-tight lg:mt-8">
                     <div class="text-lg font-semibold sm:text-2xl lg:text-3xl"> Денис Поляков </div>
                     <div class="text-primary font-semibold sm:text-xl lg:text-2xl"> Co-founder </div>
@@ -6090,16 +6136,14 @@
                     class="font-semibold transition-opacity hover:opacity-70" href="https://youtu.be/ctnBB3BC43A"
                     target="_blank"> https://youtu.be/ctnBB3BC43A </a></p>
               </div>
-                <div class="video-container">
-                  <div class="video-wrapper">
-                    <iframe 
-                      src="https://www.youtube.com/embed/1LmmNL6xHZE" 
-                      title="Как зарегистрироваться на Криптобирже? Пошаговое руководство | ByBit"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin" 
-                      allowfullscreen>
-                    </iframe>
-                  </div>
+              <div class="video-container">
+                <div class="video-wrapper">
+                  <iframe src="https://www.youtube.com/embed/1LmmNL6xHZE"
+                    title="Как зарегистрироваться на Криптобирже? Пошаговое руководство | ByBit"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                  </iframe>
+                </div>
               </div>
             </div><!--]-->
           </div>
